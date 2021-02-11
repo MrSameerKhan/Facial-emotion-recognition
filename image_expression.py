@@ -4,8 +4,9 @@ import cv2
 import numpy as np
 from keras.models import load_model
 import sys
-faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
-model = load_model('keras_model/model_5-49-0.62.hdf5')
+
+faceCascade = cv2.CascadeClassifier('weights/haarcascade_frontalface_alt2.xml')
+model = load_model('weights/keras_model.hdf5')
 
 def test_image(addr):
     target = ['angry','disgust','fear','happy','sad','surprise','neutral']

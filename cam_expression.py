@@ -9,10 +9,10 @@ Created on Sat Jun  3 15:36:49 2017
 import cv2
 import numpy as np
 from keras.models import load_model
-faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
+faceCascade = cv2.CascadeClassifier('weights/haarcascade_frontalface_alt2.xml')
 
 video_capture = cv2.VideoCapture(0)
-model = load_model('keras_model/model_5-49-0.62.hdf5')
+model = load_model('weights/keras_model.hdf5')
 
 target = ['angry','disgust','fear','happy','sad','surprise','neutral']
 font = cv2.FONT_HERSHEY_SIMPLEX
